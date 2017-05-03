@@ -1,0 +1,16 @@
+{
+  "status": 1,
+  "info": "全省技术服务机构情况",
+  "data": {
+    "totalCount": "30",
+    "firstCount": "1",
+    "secondCount": "20",
+    "thirdCount": "9",
+    "ffxmhCount": 186,
+    "echart":[
+      {"name":"已完成","value":81},
+      {"name":"正在进行","value":80},
+      {"name":"已终止","value":25}
+    ]
+  }
+}

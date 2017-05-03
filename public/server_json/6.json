@@ -1,0 +1,15 @@
+{
+  "status": 1,
+  "info": "职业病人数",
+  "data": {
+    "echart":[
+      {"year":"2011","count":861},
+      {"year":"2012","count":952},
+      {"year":"2013","count":1201},
+      {"year":"2014","count":1457},
+      {"year":"2015","count":1683},
+      {"year":"2016","count":2223},
+      {"year":"2017","count":602}
+    ]
+  }
+}

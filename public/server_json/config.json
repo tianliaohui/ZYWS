@@ -1,0 +1,16 @@
+{
+  "status": 1,
+  "info": "模块url连接",
+  "data": {
+    "module_1": "server_json/1.json",
+    "module_2": "server_json/2.json",
+    "module_3": "server_json/3.json",
+    "module_4": "server_json/4.json",
+    "module_5": "server_json/5.json",
+    "module_6": "server_json/6.json",
+    "module_7": "server_json/7.json",
+    "module_8": "server_json/8.json",
+    "module_9": "server_json/9.json",
+    "module_10": "server_json/10.json"
+  }
+}

@@ -1,0 +1,56 @@
+.map-region {
+
+  width: 100%;
+  background: -webkit-linear-gradient(top, transparent 20px, #032B41 20px), -webkit-linear-gradient(left, transparent 20px, #032B41 20px);
+  background-size: 21px 21px;
+  background-color: #112040;
+}
+
+.map{
+  height: 42px;
+}
+.btn1,.btn2{
+  width: 80px;
+}
+.btn2{
+  margin-left: 5px;
+}
+.select3{
+  width:100px;
+}
+.map-title{
+  height: 35px;
+  background: #002C50;
+  line-height: 35px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* 三列中间自适应布局 */
+
+/*带返回按钮的布局*/
+.g-sd51{position:relative;float:left;width:80px;margin:0 -80px 0 0;}
+.g-sd52{position:relative;float:left;width:160px;margin:0 -160px 0 0;}
+.g-sd52{float:right;width:185px;margin:0 0 0 -185px;}
+.g-mn5{float:left;width:100%;}
+.g-mn5c{margin:0 190px 0 85px;}
+
+
+/*不带返回按钮的布局*/
+.g-sd522{position:relative;float:left;width:100px;margin:0 -105px 0 0;}
+.g-sd522{float:right;width:105px;margin:0 0 0 -110px;}
+.g-mn52{float:left;width:100%;}
+.g-mn5c2{margin:0 105px 0 85px;}
+
+
+/*.g-sd51{*/
+  /*background: #f0ad4e;*/
+/*}*/
+/*.g-mn5{*/
+  /*background: #a6f029;*/
+/*}*/
+/*.g-sd51{*/
+  /*background: #f01b12;*/
+
+/*}*/

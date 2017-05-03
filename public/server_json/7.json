@@ -1,0 +1,15 @@
+{
+  "status": 1,
+  "info": "全省企业概况",
+  "data": {
+    "allQyCount":"69872",
+    "ldzCount":"414233",
+    "zybwhCount":"4468",
+    "ywcsbqyCount":"7131",
+    "echart":[
+      {"name":"暂停生产","value":20},
+      {"name":"正常生产","value":77},
+      {"name":"已关闭","value":3}
+    ]
+  }
+}
