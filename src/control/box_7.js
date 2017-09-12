@@ -6,6 +6,7 @@ import ECharts from 're-echarts';
 import ChartConfig from '../charts/chartConfig'
 import {Spin, Tag,Card} from 'antd';
 import {Http, eventProxy} from '../config';
+import NumberAnimat from './NumberAnimat';
 // import './box_4.css';
 
 class Box extends Component {
@@ -128,6 +129,9 @@ class Box extends Component {
 
     }
 
+    fontColor={
+        color:'#F39F00'
+}
 
 
     listFn() {
@@ -151,16 +155,24 @@ class Box extends Component {
                                 <table className="table" style={{margin:0}}>
                                     <tbody>
                                     <tr>
-                                    <td><Tag color="#032D4F" >已登记企业总数: {allQyCount}家</Tag></td>
+                                    <td><Tag color="#032D4F" >已登记企业总数: 
+                                        
+                                    <span style={this.fontColor}><NumberAnimat number={allQyCount}/></span>家</Tag></td>
                                     </tr>
                                     <tr>
-                                    <td><Tag color="#032D4F" >已完成申报企业数: {ywcsbqyCount}家</Tag></td>
+                                    <td><Tag color="#032D4F" >已完成申报企业数: 
+                                        
+                                    
+                                        <span style={this.fontColor}><NumberAnimat number={ywcsbqyCount}/></span> 家
+                                        
+                                        </Tag></td>
                                     </tr>
                                     <tr>
-                                    <td><Tag color="#032D4F" >已申报企业劳动者总人数: {ldzCount}人</Tag></td>
+                                    <td><Tag color="#032D4F" >已申报企业劳动者总人数: 
+                                        <span style={this.fontColor}><NumberAnimat number={ldzCount}/></span>人</Tag></td>
                                     </tr>
                                     <tr>
-                                    <td><Tag color="#032D4F" >已申报企业涉及接触职业病危害人数: {zybwhCount}人</Tag></td>
+                                    <td><Tag color="#032D4F" >已申报企业涉及接触职业病危害人数: <span style={this.fontColor}><NumberAnimat number={zybwhCount}/></span>人</Tag></td>
                                     </tr>
 
                                     </tbody>

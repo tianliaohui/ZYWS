@@ -2,7 +2,7 @@
  * Created by liaohui1080 on 2017/3/17.
  */
 import React, {Component} from 'react';
-import {Spin} from 'antd';
+import {Spin,Carousel,Alert} from 'antd';
 import {Http, eventProxy} from '../config';
 import './box_1.css';
 
@@ -19,8 +19,9 @@ class Box_1 extends Component {
 
         //-------------控件 事件 和初始化------------------------------
         this.state = {
+            list: null,
             loading: true,
-            title: '默认主题',
+            title: this.props.title,
             http: {
                 url: this.props.url,
                 data: null
@@ -90,7 +91,7 @@ class Box_1 extends Component {
 
 
     componentWillReceiveProps(nextProps) {
-
+        console.log(nextProps)
         //从父级Props url 获得url连接
         this.setState({
             http: {
@@ -102,37 +103,55 @@ class Box_1 extends Component {
 
 
     listFn() {
-        let abc = [];
+        
+  if (this.state.list) {
 
-        if (this.state.list) {
+            const options = this.options;
+
+            let list = this.state.list;
+
+
+            let abc = [];
+
+        if (list.length>0) {
 
 
 
 
-            this.state.list.map((item, index) => {
+            list.map((item, index) => {
+
 
                 switch (item.type) {
                     case '异常信息':
                         abc.push(
-                            <a href="#" key={index} className="list-group-item list-group-item-danger"
+                           
+                            <a href="#"  key={index} className="list-group-item list-group-item-danger"
                                style={{ whiteSpace:"nowrap"}}>
                                 <span className="label label-danger"> {item.type}</span>
                                 &nbsp;&nbsp;{item.content}</a>
+                           
                         );
 
                         break;
 
                     case '系统消息':
                         abc.push(
-                            <a href="#" key={index} className="list-group-item" style={{ whiteSpace:"nowrap"}}>
+                            
+                            <a href="#" key={index}  className="list-group-item" style={{ whiteSpace:"nowrap"}}>
                                 <span className="label label-primary" >{item.type}</span>
                                 &nbsp;&nbsp;{item.content}</a>
+                           
                         );
                         break;
                 }
 
 
             });
+        }else{
+    
+            abc.push(
+                    <Alert message="没有内容" type="warning" />
+                )
         }
 
 
@@ -141,11 +160,32 @@ class Box_1 extends Component {
                 <div className="panel-heading">{this.state.title}</div>
 
                 <div className="list-group">
-                    {abc}
+                       
+                     <Carousel  autoplay 
+                        vertical="true"
+                        dots="false"
+                        slidesToShow="5" >
+   
+                             {abc} 
+                            
+                      
+   
+
+                        </Carousel>
 
                 </div>
+
+                
+
             </div>
         );
+
+
+  }
+         
+
+
+
     }
 
 

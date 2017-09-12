@@ -4,6 +4,7 @@
 import React, {Component} from 'react';
 import {Spin, Alert,Tag} from 'antd';
 import {Http, eventProxy} from '../config';
+import NumberAnimat from './NumberAnimat';
 import './box_2.css';
 
 class Box extends Component {
@@ -95,6 +96,11 @@ class Box extends Component {
         color:'#F39F00'
 }
 
+
+
+
+   
+
     listFn() {
 
 
@@ -113,11 +119,11 @@ class Box extends Component {
                         <tbody>
                         <tr>
                             <td>
-                                <div className="alert " style={this.alertStyle} role="alert">已检查企业数: <span style={this.fontColor}>{yjcqys}</span> 家 </div>
+                                <div className="alert " style={this.alertStyle} role="alert">已检查企业数: <span style={this.fontColor}><NumberAnimat number={yjcqys}/></span> 家 </div>
                             </td>
                             <td>
 
-                                <div className="alert "  style={this.alertStyle} role="alert">查出职业卫生隐患: <span style={this.fontColor}>{yhCount}</span> 条</div>
+                                <div className="alert "  style={this.alertStyle} role="alert">查出职业卫生隐患: <span style={this.fontColor}><NumberAnimat number={yhCount}/></span> 条</div>
                             </td>
                         </tr>
                         <tr>
@@ -186,7 +192,7 @@ class Box extends Component {
 
             <Spin tip="正在加载..." spinning={this.state.loading}>
                 <div className="panel panel-default" style={this.style}>
-
+                    
                     {this.listFn()}
 
 

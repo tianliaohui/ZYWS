@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import {Spin, Cascader, Select, Button, Tag, Card, message,Alert} from 'antd';
+import {Spin, Cascader, Select, Button, Tag, Card, message,Alert,Carousel} from 'antd';
 import {Http, eventProxy} from '../config';
 import './box_9.css';
 
@@ -200,8 +200,8 @@ class Box extends Component {
 
                     abc.push(
 
-
-                        <div className="panel panel-primary" key={index}>
+                        <div key={index}>
+                        <div className="panel panel-primary"   >
                             <div className="panel-heading">
                                 <div className="panel-title pull-left">{item.qymc}</div>
 
@@ -211,7 +211,7 @@ class Box extends Component {
 
                                 </div>
                             </div>
-                            <div className="panel-body">
+                            <div className="panel-body" >
 
                                 <table className="table" style={{margin:0}}>
                                     <tbody>
@@ -243,7 +243,7 @@ class Box extends Component {
 
                             </div>
                         </div>
-
+                        </div>
                     )
 
                 });
@@ -290,9 +290,17 @@ class Box extends Component {
                     </div>
 
 
-                      <div className="panel-body" style={{height: this.height - 30, padding: 10, overflowY: "auto"}}>
+                      <div className="panel-body" style={{height: this.height - 30, padding: 10, overflowY: "hidden"}}>
+                   
 
-                          {abc}
+                        <Carousel
+                        autoplay 
+                        vertical="true"
+                        dots="false"
+                        slidesToShow="3" >
+                            {abc}
+                        </Carousel>
+                        
 
                       </div>
 
