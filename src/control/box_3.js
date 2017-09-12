@@ -99,6 +99,7 @@ class Box extends Component {
                     });
 
                     this.setState({
+                        title:res.info,
                         list: res.data,
                         loading: false,
                         options: this.myOption,

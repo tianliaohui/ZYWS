@@ -21,7 +21,7 @@ class Box extends Component {
         // console.log(this.props)
 
         this.myConfig = new ChartConfig();
-        this.myConfig.echartDefault.tooltip.formatter="{a} <br/>{b} : {c} " + "%";
+        this.myConfig.echartDefault.tooltip.formatter="{a} <br/>{b} : {c} " + "家";
 
         //准备数据
         this.myOption = {
@@ -103,7 +103,9 @@ class Box extends Component {
 
 
 
+
                     this.setState({
+                        title:res.info,
                         list: res.data,
                         loading: false,
                         options: this.myOption,
@@ -155,20 +157,20 @@ class Box extends Component {
                                 <table className="table" style={{margin:0}}>
                                     <tbody>
                                     <tr>
-                                    <td><Tag color="#032D4F" >已登记企业总数: 
-                                        
+                                    <td><Tag color="#032D4F" >已登记企业总数:
+
                                     <span style={this.fontColor}><NumberAnimat number={allQyCount}/></span>家</Tag></td>
                                     </tr>
                                     <tr>
-                                    <td><Tag color="#032D4F" >已完成申报企业数: 
-                                        
-                                    
+                                    <td><Tag color="#032D4F" >已完成申报企业数:
+
+
                                         <span style={this.fontColor}><NumberAnimat number={ywcsbqyCount}/></span> 家
-                                        
+
                                         </Tag></td>
                                     </tr>
                                     <tr>
-                                    <td><Tag color="#032D4F" >已申报企业劳动者总人数: 
+                                    <td><Tag color="#032D4F" >已申报企业劳动者总人数:
                                         <span style={this.fontColor}><NumberAnimat number={ldzCount}/></span>人</Tag></td>
                                     </tr>
                                     <tr>

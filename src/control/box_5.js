@@ -127,6 +127,7 @@ class Box extends Component {
 
                     this.setState({
                         list: res.data,
+                        title:res.info,
                         loading: false,
                         options: this.myOption,
                         config: {

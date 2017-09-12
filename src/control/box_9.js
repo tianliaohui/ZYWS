@@ -54,7 +54,7 @@ class Box extends Component {
                 url: this.state.http.url,
                 callback: (res) => {
 
-                    this.setState({list: res.data, loading: false,});
+                    this.setState({list: res.data, loading: false,title:res.info});
                 }
             });
         })
@@ -291,16 +291,16 @@ class Box extends Component {
 
 
                       <div className="panel-body" style={{height: this.height - 30, padding: 10, overflowY: "hidden"}}>
-                   
+
 
                         <Carousel
-                        autoplay 
+                        autoplay
                         vertical="true"
                         dots="false"
                         slidesToShow="3" >
                             {abc}
                         </Carousel>
-                        
+
 
                       </div>
 
